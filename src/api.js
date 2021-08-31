@@ -21,7 +21,8 @@ export const MovieApi = {
         params: {
             query: encodeURIComponent(term)
         }
-    })
+    }),
+    collection: (id) => api.get(`collection/${id}`)
 }
 
 export const TVApi = {
@@ -37,5 +38,6 @@ export const TVApi = {
         params: {
             query: encodeURIComponent(term)
         }
-    })
+    }),
+    collection: (id) => api.get(`collection/${id}`)
 }

@@ -5,18 +5,23 @@ import Home from "Routes/Home";
 import Search from "Routes/Search";
 import TV from "Routes/TV";
 import Header from "Components/Header";
+import Infomation from "Routes/Detail/information";
+import Videos from "Routes/Detail/Videos";
 
-export default () => (
+
+const RootRouter = () => (
     <Router>
         <>
             <Header />
-            <Switch>
-                <Route path="/" exact component={Home} />
-                <Route path="/tv" exact component={TV} />
-                <Route path="/search" component={Search} />
-                <Route path="/show/:id" component={Detail} />
-                <Redirect from="*" to="/" />
-            </Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/tv" exact component={TV} />
+            <Route path="/search" component={Search} />
+            <Route path="/movie/:id" component={Detail} />
+            <Route path="/movie/:id/infomation" component={Infomation} />
+            <Route path="/movie/:id/teaser-trailer" component={Videos} />
+            <Route path="/show/:id" component={Detail} />
         </>
     </Router>
 )
+
+export default RootRouter;

@@ -1,1 +1,3 @@
-export default () => "Search";
+import TVContainer from "./TVContainer";
+
+export default TVContainer;
