@@ -20,6 +20,8 @@ const RootRouter = () => (
             <Route path="/movie/:id/infomation" component={Infomation} />
             <Route path="/movie/:id/teaser-trailer" component={Videos} />
             <Route path="/show/:id" component={Detail} />
+            <Route path="/show/:id/infomation" component={Infomation} />
+            <Route path="/show/:id/teaser-trailer" component={Videos} />
         </>
     </Router>
 )
