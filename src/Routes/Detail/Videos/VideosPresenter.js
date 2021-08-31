@@ -24,12 +24,12 @@ const NoVideo = styled.p`
 
 const Videos = ({result, loading, error , collection}) => 
         loading
-        ? <>
+        ? (<>
             <Helmet>
                 <title>Loading | Nonfilx</title>
             </Helmet>
             <Loader/>
-        </>
+        </>)
         : (<VideoWrap>
                 {result.videos.results
                 && result.videos.results.length > 0

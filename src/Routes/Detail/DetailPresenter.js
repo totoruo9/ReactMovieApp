@@ -85,8 +85,8 @@ const SelectBtn = styled(Link)`
     :first-child {
         border-right: 0;
     };
-    background: ${props => props.selected ? "#fff" : "rgba(255,255,255,.15)"}};
-    color: ${props => props.selected ? "#333" : "#fff"}};
+    background: ${props => props.selected ? "#fff" : "rgba(255,255,255,.15)"};
+    color: ${props => props.selected ? "#333" : "#fff"};
 `;
 
 
