@@ -31,7 +31,7 @@
       "react-app/jest"
     ]
   },
-  "homepage": "https://totoruo9.github.io/ReactMovieApp",
+  "homepage": "https://totoruo9.github.io/ReactMovieApp/",
   "browserslist": {
     "production": [
       ">0.2%",
