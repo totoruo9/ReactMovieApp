@@ -15,6 +15,13 @@ const Video = styled.iframe`
     margin-bottom: 20px;
 `;
 
+const NoVideo = styled.p`
+    padding: 80px;
+    text-align: center;
+    font-size: 18px;
+    color: #ff0000;
+`
+
 const Videos = ({result, loading, error , collection}) => 
         loading
         ? <>
@@ -26,14 +33,16 @@ const Videos = ({result, loading, error , collection}) =>
         : (<VideoWrap>
                 {result.videos.results
                 && result.videos.results.length > 0
-                && result.videos.results.map(video => {
+                ? result.videos.results.map(video => {
                     return <Video
                     width="790"
                     height="444"
                     src={`https://www.youtube.com/embed/${video.key}`}
                     title="YouTube video player"
                     ></Video>
-                })}
+                })
+                : <NoVideo>No Videos Yet</NoVideo>
+                }
             </VideoWrap>)
 
 export default Videos
